@@ -14,16 +14,17 @@ def sunsentinel_theme():
     navy = '#024584'
 
     return {
-        "width": 450,
-        "height": 300,
+        "width": 640,
+        "height": 360,
         "config": {
+            "background": "#ffffff",
             "title": {
                 "fontSize": 18,
                 "anchor": "start", # equivalent of left-aligned
                 "color": sunrust
             },
             "axisX": {
-                "domain": True,
+                "domain": False,
                 "domainColor": greydk,
                 "domainWidth": 1,
                 "grid": True,
@@ -32,19 +33,19 @@ def sunsentinel_theme():
                 "labelFontSize": 12,
                 "labelColor": greydk,
                 "labelAngle": 0, 
-                "tickColor": greydk,
+                "tickColor": grey,
                 "tickSize": 5,
                 "titleFontSize": 12,
             },
             "axisY": {
-                "domain": True,
+                "domain": False,
                 "domainColor": greydk,
                 "grid": True,
                 "gridColor": grey,
                 "gridWidth": 0.5,
                 "labelFontSize": 12,
                 "labelAngle": 0, 
-                "ticks": True,
+                "ticks": False,
                 "titleFontSize": 12,
             },
             "header": {
@@ -59,6 +60,10 @@ def sunsentinel_theme():
                 "labelFontSize": 12,
                 "symbolSize": 100, # default,
                 "titleFontSize": 12,
+                "title": ""
+            },
+            "view": {
+                "stroke": 0
             },
             ### MARKS CONFIGURATIONS ###
             "area": {
