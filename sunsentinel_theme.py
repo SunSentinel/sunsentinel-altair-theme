@@ -1,4 +1,5 @@
 def sunsentinel_theme(): 
+    # Color palette
     black = '#000000'
     greydk = '#333333'
     greymed = '#999999'
@@ -13,54 +14,63 @@ def sunsentinel_theme():
     cloud = '#9dd1f6'
     navy = '#024584'
 
+    # Typography
+    headlineFontSize = 20
+    headlineFontWeight = 'normal'
+    headlineFont = 'Open Sans, Arial, sans'
+
+    # Axes and legends
+    titleFont = 'Open Sans, Arial, sans'
+    titleFontWeight = 'normal'
+    titleFontSize = 14
+
+    # Ticks and labels
+    labelFont = 'Open Sans, Arial, sans'
+    labelFontSize = 12
+    labelFontWeight = 'normal'
+
     return {
-        "width": 640,
-        "height": 360,
+        "width": 720,
+        "height": 405,
         "config": {
-            "background": "#ffffff",
+            "background": white,
             "title": {
-                "fontSize": 18,
-                "anchor": "start", # equivalent of left-aligned
-                "color": sunrust
+                "font": headlineFont,
+                "fontSize": headlineFontSize,
+                "fontWeight": headlineFontWeight,
+                "anchor": "start",
+                "color": black
+            },
+            "axis": {
+                "titleFont": titleFont,
+                "titleFontSize": titleFontSize,
+                "titleFontWeight": titleFontWeight,
+                "labelFont": labelFont,
+                "labelFontSize": labelFontSize,
+                "labelFontWeight": labelFontWeight
             },
             "axisX": {
-                "domain": False,
-                "domainColor": greydk,
-                "domainWidth": 1,
-                "grid": True,
-                "gridColor": grey,
-                "gridWidth": 0.5,
-                "labelFontSize": 12,
-                "labelColor": greydk,
-                "labelAngle": 0, 
+                "labelAngle": 0,
+                "labelPadding": 3,
                 "tickColor": grey,
-                "tickSize": 5,
-                "titleFontSize": 12,
+                "tickSize": 3,
             },
             "axisY": {
-                "domain": False,
-                "domainColor": greydk,
-                "grid": True,
-                "gridColor": grey,
-                "gridWidth": 0.5,
-                "labelFontSize": 12,
-                "labelAngle": 0, 
-                "ticks": False,
-                "titleFontSize": 12,
-            },
-            "header": {
-                "labelFontSize": 16,
-                "titleFontSize": 16
-            },
+                "labelAngle": 0,
+                "labelBaseline": "middle",
+                "titleAlign": "left",
+                "titleAngle": 0,
+                
+            }
             "range": {
-                "category": [sunrust, red, palepink, grey, greydk, black],
+                "category": [sunrust, red, palepink, grey, greymed, greydk],
                 "diverging": [red, palepink, grey, cloud, sky],
             },
             "legend": {
-                "labelFontSize": 12,
-                "symbolSize": 100, # default,
-                "titleFontSize": 12,
-                "title": ""
+                "labelFont": labelFont,
+                "labelFontSize": labelFontSize,
+                "titleFont": titleFont,
+                "titleFontSize": titleFontSize
             },
             "view": {
                 "stroke": 0
@@ -94,7 +104,7 @@ def sunsentinel_theme():
             },
             "text": {
                "color": sunrust,
-               "fontSize": 11,
+               "fontSize": 14,
                "align": "right",
                "size": 14,
             }, 
@@ -102,7 +112,6 @@ def sunsentinel_theme():
                 "size": 10,
                 "binSpacing": 1,
                 "continuousBandSize": 10,
-#                 "discreteBandSize": 10,
                 "fill": sunrust,
                 "stroke": False,
             },
